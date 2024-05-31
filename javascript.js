@@ -13,6 +13,13 @@ function createGrid(num) {
   }
 }
 
+function removeGrid() {
+  const rows = document.querySelectorAll(".row");
+  rows.forEach((element) => {
+    element.remove();
+  });
+}
+
 //Starting grid
 createGrid(16);
 let gridSize = 16;
@@ -24,7 +31,6 @@ gridContainer.addEventListener("mouseover", (event) => {
 });
 
 const resetButton = document.querySelector(".resetButton");
-
 resetButton.addEventListener("click", () => {
   const traceLine = document.querySelectorAll(".gridSquare");
   traceLine.forEach((element) => {
@@ -33,24 +39,18 @@ resetButton.addEventListener("click", () => {
 });
 
 const sizeButton = document.querySelector(".sizeButton");
-
 sizeButton.addEventListener("click", () => {
-  const removeRows = document.querySelectorAll(".row");
-  removeRows.forEach((element) => {
-    element.remove();
-  });
   let inputNumber = parseInt(
     prompt("Enter a grid size between 10 and 100 (Current: " + gridSize + ")"),
     10
   );
   if (isNaN(inputNumber)) {
-    alert("Please enter a number");
-    return createGrid(gridSize);
+    alert("Please enter a number between 10 and 100");
   } else if (inputNumber < 10 || inputNumber > 100) {
-    alert("Please enter a number betwen 10 and 100");
-    return createGrid(gridSize);
+    alert("Please enter a number between 10 and 100");
+  } else {
+    removeGrid();
+    createGrid(inputNumber);
+    gridSize = inputNumber;
   }
-
-  createGrid(inputNumber);
-  gridSize = inputNumber;
 });
