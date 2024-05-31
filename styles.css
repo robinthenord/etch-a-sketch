@@ -37,6 +37,7 @@ body {
 .gridSquare {
   flex: 1;
   border: 1px dotted black;
+  background-color: #F2F2F2;
 }
 
 button {

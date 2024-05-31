@@ -1,4 +1,5 @@
 const gridContainer = document.querySelector(".container");
+const gridCells = document.querySelectorAll(".gridSquare");
 
 function createGrid(num) {
   for (i = 0; i < num; i++) {
@@ -13,7 +14,7 @@ function createGrid(num) {
   }
 }
 
-createGrid(48);
+createGrid(8);
 
 gridContainer.addEventListener("mouseover", (event) => {
   if (event.target.className === "gridSquare") {
@@ -22,4 +23,12 @@ gridContainer.addEventListener("mouseover", (event) => {
 });
 
 const resetButton = document.querySelector(".resetButton");
+
+resetButton.addEventListener("onclick", () => {
+  let trace = document.querySelectorAll(".gridSquare");
+  trace.forEach((cell) => {
+    console.log(cell);
+  })
+});
+
 const sizeButton = document.querySelector(".sizeButton");
