@@ -26,15 +26,15 @@ let gridSize = 16;
 
 gridContainer.addEventListener("mouseover", (event) => {
   if (event.target.className === "gridSquare") {
-    event.target.style.background = "black";
+    event.target.className = "traceLine";
   }
 });
 
 const resetButton = document.querySelector(".resetButton");
 resetButton.addEventListener("click", () => {
-  const traceLine = document.querySelectorAll(".gridSquare");
+  const traceLine = document.querySelectorAll(".traceLine");
   traceLine.forEach((element) => {
-    element.style.background = "#F2F2F2";
+    element.className = "gridSquare";
   });
 });
 

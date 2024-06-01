@@ -40,6 +40,12 @@ body {
   background-color: #F2F2F2;
 }
 
+.traceLine {
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+}
+
 button {
   padding: 4px 20px;
   margin: 12px;
