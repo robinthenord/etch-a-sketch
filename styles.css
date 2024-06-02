@@ -36,13 +36,13 @@ body {
 
 .gridSquare {
   flex: 1;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: #F2F2F2;
 }
 
 .traceLine {
   flex: 1;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: #000000;
 }
 
